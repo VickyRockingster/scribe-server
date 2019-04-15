@@ -1,5 +1,7 @@
-class EntriesController < ApplicationController
-  before_action :set_entry, only: [:show, :update, :destroy]
+# frozen_string_literal: true
+
+class EntriesController < ProtectedController
+  before_action :set_entry, only: %i[show update destroy]
 
   # GET /entries
   def index
